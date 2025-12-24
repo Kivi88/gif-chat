@@ -23,7 +23,6 @@ function Home() {
   const [friendRequests, setFriendRequests] = useState<FriendRequest[]>([])
   const [specialUsers, setSpecialUsers] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
-  const [socket, setSocket] = useState<Socket | null>(null)
 
   useEffect(() => {
     if (!token) {
@@ -35,12 +34,10 @@ function Home() {
 
     const newSocket = io()
     newSocket.emit('auth', token)
-    
+
     newSocket.on('chat-created', () => {
       loadData()
     })
-
-    setSocket(newSocket)
 
     return () => {
       newSocket.disconnect()

@@ -28,7 +28,6 @@ function AdminPanel() {
   const [showPreview, setShowPreview] = useState(false)
   const [loading, setLoading] = useState(true)
   const [specialGroups, setSpecialGroups] = useState<any[]>([])
-  const [newGroupName, setNewGroupName] = useState('')
   const [showCreateGroup, setShowCreateGroup] = useState(false)
   const [inviteName, setInviteName] = useState('')
 
