@@ -29,7 +29,7 @@ function Chat({ isConnected, setIsConnected, selectedGif, setSelectedGif }: Chat
   }, [messages])
 
   const handleConnect = () => {
-    const newSocket = io('http://localhost:3001')
+    const newSocket = io()
     
     newSocket.on('connect', () => {
       setIsConnected(true)

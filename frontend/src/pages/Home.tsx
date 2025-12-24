@@ -33,7 +33,7 @@ function Home() {
 
     loadData()
 
-    const newSocket = io('http://localhost:3001')
+    const newSocket = io()
     newSocket.emit('auth', token)
     
     newSocket.on('chat-created', () => {

@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3001/api'
+const API_URL = '/api'
 
 export async function register(username: string, email: string, password: string) {
   const response = await fetch(`${API_URL}/register`, {

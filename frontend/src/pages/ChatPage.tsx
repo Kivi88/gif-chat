@@ -43,7 +43,7 @@ function ChatPage() {
 
     loadMessages()
 
-    const newSocket = io('http://localhost:3001')
+    const newSocket = io()
     newSocket.emit('auth', token)
     newSocket.emit('join-chat', parseInt(chatId))
 
